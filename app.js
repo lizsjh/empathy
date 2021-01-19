@@ -16,23 +16,6 @@ botui.message.add({
         action: {
           placeholder: 'Enter your message.'
         }
-    
-    });
-}).then(function (res) { 
-        console.log(res.value);
-        response.push(res.value);
-}).then(function(){
-    return botui.message.add({
-        delay:700,
-        loading: true,
-        content:'I do not understand what you said. Can you try again?'
-    });
-}).then(function(){
-    return botui.action.text({
-        action: {
-            placeholder: 'Enter your message.'
-        }
-  
     });
 }).then(function (res) { 
         console.log(res.value);
@@ -79,22 +62,6 @@ botui.message.add({
     return botui.message.add({
         delay:700,
         loading: true,
-        content:'I don’t quite get what you are saying. Please repeat.'
-    });
-}).then(function(){
-    return botui.action.text({
-        action: {
-          placeholder: 'Enter your message.'
-        }
-    
-    });
-}).then(function (res) { 
-    console.log(res.value);
-    response.push(res.value);
-}).then(function(){
-    return botui.message.add({
-        delay:700,
-        loading: true,
         content:'Can you describe condition of the rest of the items?'
     });
 }).then(function(){
@@ -111,7 +78,7 @@ botui.message.add({
     return botui.message.add({
         delay:700,
         loading: true,
-        content:'I can’t process your message. Please type again.'
+        content:'I don’t quite understand what you are saying. Can you repeat again?'
     });
 }).then(function(){
     return botui.action.text({
@@ -134,22 +101,6 @@ botui.message.add({
         delay:700,
         loading: true,
         content:'I can create a new order that will be delivered within a day, or I can refund for the missing item. What would you prefer?'
-    });
-}).then(function(){
-    return botui.action.text({
-        action: {
-          placeholder: 'Enter your message.'
-        }
-        
-    });
-}).then(function (res) { 
-        console.log(res.value); 
-        response.push(res.value); 
-}).then(function(){
-    return botui.message.add({
-        delay:700,
-        loading: true,
-        content:'I cannot understand. Can you repeat?'
     });
 }).then(function(){
     return botui.action.text({
