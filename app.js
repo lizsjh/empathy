@@ -19,8 +19,8 @@ botui.message.add({
     
     });
 }).then(function (res) { 
-        console.log(res.value);
-        response.push(res.value);   
+    console.log(res.value);
+    response.push(res.value);
 }).then(function(){
     return botui.message.add({
         delay:900,
@@ -30,43 +30,43 @@ botui.message.add({
 }).then(function(){
     return botui.action.text({
         action: {
-            placeholder: 'Enter your message.'
-        }   
+          placeholder: 'Enter your message.'
+        }
+    
     });
 }).then(function (res) { 
-        console.log(res.value);
-        response.push(res.value);
+    console.log(res.value);
+    response.push(res.value);
 }).then(function(){
     return botui.message.add({
         delay:700,
         loading: true,
-        content:'I don’t understand what you said. Can you try again?'
+        content:'I do not understand what you said. Can you try again?'
     });
 }).then(function(){
     return botui.action.text({
         action: {
-            placeholder: 'Enter your message.'
-        }   
-    });
+          placeholder: 'Enter your message.'
+        }
+        });
 }).then(function (res) { 
-        console.log(res.value);
-        response.push(res.value);
+    console.log(res.value);
+    response.push(res.value);
 }).then(function(){
     return botui.message.add({
         delay:1000,
         loading: true,
-        content:'I still didn’t get what you said, and I can feel your frustration. Can you type again?'
+        content:'I still did not get what you said, and I can feel your frustration. Can you type again?'
     });
 }).then(function(){
     return botui.action.text({
         action: {
-            placeholder: 'Enter your message.'
+          placeholder: 'Enter your message.'
         }
-          
-    });
+        });
 }).then(function (res) { 
-        console.log(res.value);
-        response.push(res.value);
+    console.log(res.value);
+    response.push(res.value);
 }).then(function(){
     return botui.message.add({
         delay:700,
@@ -78,16 +78,15 @@ botui.message.add({
         action: {
           placeholder: 'Enter your message.'
         }
-    
-    });
+        });
 }).then(function (res) { 
-        console.log(res.value); 
-        response.push(res.value);
+    console.log(res.value);
+    response.push(res.value);
 }).then(function(){
     return botui.message.add({
         delay:700,
         loading: true,
-        content:'Alright. I’ll process your request. Please give me a moment.'
+        content:'Alright. I will process your request. Please give me a moment.'
     });
 }).then(function(){
     return botui.message.add({
@@ -121,17 +120,23 @@ botui.message.add({
     
     });
 }).then(function (res) { 
-        console.log(res.value); 
-        response.push(res.value);
+    console.log(res.value);
+    response.push(res.value);
+}).then(function(){
+    return botui.message.add({
+        delay:1800,
+        loading: true,
+        content:'I have processed your request. The issue is resolved.'
+    });
 }).then(function(){
     sendcomplete();
     return botui.message.add({
-        delay:700,
+        delay:900,
         loading: true,
-        content:'I have processed your request. Please contact us again if you need further assistance. Bye.'
+        content:'Please contact us again if you need further assistance. Bye.'
     });
 });
 
 function sendcomplete(){
-    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2]},"text4":response[3]},"text5":response[4]},"text6":response[5]}, "*");
+    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2],"text4":response[3],"text5":response[4],"text6":response[5]}, "*");
 };
