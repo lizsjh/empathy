@@ -101,7 +101,7 @@ botui.message.add({
     return botui.message.add({
         delay:2000,
         loading: true,
-        content:'I cannot understand what you said.'
+        content:'I cannot figure out what your message means.'
     });
 }).then(function(){
     return botui.message.add({
