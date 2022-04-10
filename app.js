@@ -86,7 +86,7 @@ botui.message.add({
     return botui.message.add({
         delay:2000,
         loading: true,
-        content:'Would you like to proceed with your order? If not, we can cancel your order as well.'
+        content:'What would you like to do next? We can proceed with your order or cancel it.'
     });
 }).then(function(){
     return botui.action.text({
