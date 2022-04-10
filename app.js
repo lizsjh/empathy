@@ -35,7 +35,7 @@ botui.message.add({
     });
 }).then(function(){
     return botui.message.add({
-        delay:1000,
+        delay:3000,
         loading: true,
         content:'Can you please try again?'
     });
@@ -111,7 +111,7 @@ botui.message.add({
     });
 }).then(function(){
     return botui.message.add({
-        delay:1000,
+        delay:3000,
         loading: true,
         content:'Could you respond to the question again?'
     });
