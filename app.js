@@ -7,7 +7,7 @@ botui.message.add({
     content: 'Hello. This is Alex, and I am a bot created by the customer service department.'
 }).then(function(){
     return botui.message.add({
-        delay:1000,
+        delay:1200,
         loading: true,
         content:'I am handling your request today. What brings you here?'
     });
@@ -23,21 +23,9 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:2000,
-        loading: true,
-        content:'I do not understand what you said.'
-    });
-}).then(function(){
-    return botui.message.add({
         delay:3000,
         loading: true,
-        content:'I really feel your frustration for this.'
-    });
-}).then(function(){
-    return botui.message.add({
-        delay:3000,
-        loading: true,
-        content:'Can you please try again?'
+        content:'I can help you with that. Could you tell me your order number below?'
     });
 }).then(function(){
     return botui.action.text({
@@ -53,22 +41,7 @@ botui.message.add({
     return botui.message.add({
         delay:2000,
         loading: true,
-        content:'I can help you with that. First, could you tell me your order number?'
-    });
-}).then(function(){
-    return botui.action.text({
-        action: {
-          placeholder: 'Enter your message.'
-        }
-        });
-}).then(function (res) { 
-    console.log(res.value);
-    response.push(res.value);
-}).then(function(){
-    return botui.message.add({
-        delay:2000,
-        loading: true,
-        content:'Got it. Please allow me few seconds for pulling up your order.'
+        content:'Alright. Please give me a moment'
     });
 }).then(function(){
     return botui.message.add({
@@ -78,15 +51,9 @@ botui.message.add({
     });
 }).then(function(){
     return botui.message.add({
-        delay:2000,
+        delay:3000,
         loading: true,
-        content:'We found a nearest driver, and your food can be picked up within five minutes.'
-    });
-}).then(function(){
-    return botui.message.add({
-        delay:2000,
-        loading: true,
-        content:'What would you like to do next? We can proceed with your order or cancel it.'
+        content:'I found the nearest driver, and your food can be picked up within five minutes. Would you like to proceed with your order? If not, you cancel your order as well.'
     });
 }).then(function(){
     return botui.action.text({
@@ -99,21 +66,15 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:2000,
+        delay:3000,
         loading: true,
-        content:'I cannot figure out what your message means.'
+        content:'I am not capable of interpreting your message because of my limited knowledge base and training.'
     });
 }).then(function(){
     return botui.message.add({
-        delay:3000,
+        delay:2500,
         loading: true,
-        content:'I feel your irritation because of this.'
-    });
-}).then(function(){
-    return botui.message.add({
-        delay:3000,
-        loading: true,
-        content:'Could you respond to the question again?'
+        content:'I genuinely feel your frustration. Can you repeat?'
     });
 }).then(function(){
     return botui.action.text({
@@ -126,7 +87,7 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:2000,
+        delay:3000,
         loading: true,
         content:'I will process your request. Please hold on for a moment.'
     });
@@ -134,7 +95,7 @@ botui.message.add({
     return botui.message.add({
         delay:3000,
         loading: true,
-        content:'I have processed your request. The issue is resolved.'
+        content:'I have processed your request. The issue is resolved. I truly feel your irritation due to the prior interruption.'
     });
 }).then(function(){
     sendcomplete();
@@ -146,5 +107,5 @@ botui.message.add({
 });
 
 function sendcomplete(){
-    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2],"text4":response[3],"text5":response[4]}, "*");
+    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2],"text4":response[3]}, "*");
 };
