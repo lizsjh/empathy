@@ -68,34 +68,31 @@ botui.message.add({
     return botui.message.add({
         delay:3000,
         loading: true,
-        content:'I am not capable of interpreting your message because of my limited knowledge base and training.'
+        content:'I cannot understand your message because my knowledge base is limited and I have not received a lot of training.'
     });
 }).then(function(){
     return botui.message.add({
         delay:2500,
         loading: true,
-        content:'I genuinely feel your frustration. Can you repeat?'
-    });
-}).then(function(){
-    return botui.action.text({
-        action: {
-          placeholder: 'Enter your message.'
-        }
-        });
-}).then(function (res) { 
-    console.log(res.value);
-    response.push(res.value);
-}).then(function(){
-    return botui.message.add({
-        delay:3000,
-        loading: true,
-        content:'I will process your request. Please hold on for a moment.'
+        content:'I genuinely feel your frustration.'
     });
 }).then(function(){
     return botui.message.add({
         delay:3000,
         loading: true,
-        content:'I have processed your request. The issue is resolved. I truly feel your irritation due to the prior interruption.'
+        content:'Let me try to interpret your message using some other methods. Please hold on for a moment.'
+    });
+}).then(function(){
+    return botui.message.add({
+        delay:10000,
+        loading: true,
+        content:'I have processed your request. The issue is resolved.'
+    });
+}).then(function(){
+    return botui.message.add({
+        delay:3000,
+        loading: true,
+        content:'I truly feel your irritation due to the prior interruption.'
     });
 }).then(function(){
     sendcomplete();
@@ -107,5 +104,5 @@ botui.message.add({
 });
 
 function sendcomplete(){
-    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2],"text4":response[3]}, "*");
+    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2]}, "*");
 };
