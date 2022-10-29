@@ -1,3 +1,5 @@
+npm i botui@0.3.9
+
 var botui=new BotUI('app');
 const response=new Array();
 
