@@ -6,7 +6,7 @@ import {
   BotUI,
   BotUIAction,
   BotUIMessageList,
-} from '@0.3.9' 
+} from 'botui@0.3.9' 
 
 
 var botui=new BotUI('app');
