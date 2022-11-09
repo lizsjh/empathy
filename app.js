@@ -1,14 +1,3 @@
-import { useEffect } from 'react'
-import { createBot } from 'botui'
-import { createRoot } from 'react-dom/client'
-
-import {
-  BotUI,
-  BotUIAction,
-  BotUIMessageList,
-} from 'botui@0.3.9' 
-
-
 var botui=new BotUI('app');
 const response=new Array();
 
