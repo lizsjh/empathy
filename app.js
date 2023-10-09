@@ -66,7 +66,7 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:10000,
+        delay:30000,
         loading: true,
         content:'It is taking longer than usual because I am still gathering some information to process your request.'
     });
@@ -84,9 +84,9 @@ botui.message.add({
     });
 }).then(function(){
     return botui.message.add({
-        delay:20000,
+        delay:30000,
         loading: true,
-        content:'I feel your irritation due to the delay!'
+        content:'I feel your irritation due to the delay just happened!'
     });
 }).then(function(){
     return botui.message.add({
