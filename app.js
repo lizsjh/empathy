@@ -74,7 +74,7 @@ botui.message.add({
     return botui.message.add({
         delay:3000,
         loading: true,
-        content:'I genuinely feel your frustration.'
+        content:'I genuinely feel your frustration with this delay.'
     });
 }).then(function(){
     return botui.message.add({
