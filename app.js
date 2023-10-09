@@ -74,7 +74,7 @@ botui.message.add({
     return botui.message.add({
         delay:3000,
         loading: true,
-        content:'I genuinely feel your frustration with this delay.'
+        content:'I feel your frustration with this delay.'
     });
 }).then(function(){
     return botui.message.add({
@@ -86,13 +86,13 @@ botui.message.add({
     return botui.message.add({
         delay:20000,
         loading: true,
-        content:'I have processed your request. The issue is resolved.'
+        content:'I feel your irritation due to the delay.'
     });
 }).then(function(){
     return botui.message.add({
         delay:3000,
         loading: true,
-        content:'I truly feel your irritation due to the delay.'
+        content:'I have processed your request. The issue is resolved.'
     });
 }).then(function(){
     sendcomplete();
