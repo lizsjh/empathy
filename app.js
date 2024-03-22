@@ -136,20 +136,6 @@ botui.message.add({
         delay:30000,
         loading: true,
         photo: true,
-        content:'It is taking longer than usual because I am still gathering some information to process your request.'
-    });
-}).then(function(){
-    return botui.message.add({
-        delay:3000,
-        loading: true,
-        photo: true,
-        content:'I genuinely feel your frustration. Please hold on again.'
-    });
-}).then(function(){
-    return botui.message.add({
-        delay:30000,
-        loading: true,
-        photo: true,
         content:'I have processed your request. The issue is resolved.'
     });
 }).then(function(){
@@ -157,7 +143,7 @@ botui.message.add({
         delay:3000,
         loading: true,
         photo: true,
-        content:'I truly feel your irritation due to a couple of issues that caused the delay.'
+        content:'I truly feel your irritation due to an issue that caused the delay.'
     });
 }).then(function(){
     sendcomplete();
