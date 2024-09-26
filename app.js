@@ -11,7 +11,7 @@ botui.message.add({
         delay:4000,
         loading: true,
         photo: true,
-        content:'I am handling your request today. What brings you here? If this is about your order, please provide your order number as well.'
+        content:'I am handling your request today. What brings you here?'
     });
 }).then(function(){
     return botui.action.text({
@@ -28,7 +28,7 @@ botui.message.add({
         delay:4000,
         loading: true,
         photo: true,
-        content:'I can help you with that. First, could you tell me why you need to replace or return this textbook?'
+        content:'I can help you with that. First, could you tell me your order number'
     });
 }).then(function(){
     return botui.action.text({
@@ -45,14 +45,14 @@ botui.message.add({
         delay:2000,
         loading: true,
         photo: true,
-        content:'Got it. Please give me a moment while pulling up your order.'
+        content:'Alright. Please give me a moment while pulling up your order.'
     });
 }).then(function(){
     return botui.message.add({
         delay:6000,
         loading: true,
         photo: true,
-        content:'The 2nd edition is currently in stock. It costs $125 more. Please confirm if you would like to proceed with the exchange. '
+        content:'You have ordered one pair of jeans, one swimsuit, and one necklace. Can you confirm?'
     });
 }).then(function(){
     return botui.action.text({
@@ -69,7 +69,7 @@ botui.message.add({
         delay:4000,
         loading: true,
         photo: true,
-        content:'Oh, in fact, I pulled up the information about a wrong textbook.'
+        content:'Oh, in fact, you ordered a different set of products. I accidentally pulled up the wrong order.'
     });
 }).then(function(){
     return botui.message.add({
